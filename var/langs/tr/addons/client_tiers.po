@@ -1,0 +1,178 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Turkish\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: cs-cart-latest\n"
+"X-Crowdin-Project-ID: 50163\n"
+"X-Crowdin-Language: tr\n"
+"X-Crowdin-File: /release-4.15.1/addons/client_tiers.po\n"
+"X-Crowdin-File-ID: 6570\n"
+"PO-Revision-Date: 2022-07-20 14:34\n"
+
+msgctxt "Addons::name::client_tiers"
+msgid "Client tiers"
+msgstr "Müşteri katmanları"
+
+msgctxt "Addons::description::client_tiers"
+msgid "Automatically assigns and removes customer's user group depending on money spent. Allows you to rank your customers (for example, bronze, silver, gold customers)."
+msgstr "Harcanan paraya göre müşterinin kullanıcı grubunu otomatik olarak atar ve kaldırır. Müşterilerinizi sıralamanızı sağlar (örneğin bronz, gümüş, altın müşteriler)."
+
+msgctxt "SettingsSections::client_tiers::general"
+msgid "General"
+msgstr "Genel"
+
+msgctxt "SettingsOptions::client_tiers::tiers_reporting_period"
+msgid "Reporting period"
+msgstr "raporlama dönemi"
+
+msgctxt "SettingsTooltips::client_tiers::tiers_reporting_period"
+msgid "Statistics from this period is checked to see if a customer is eligible for a certain tier"
+msgstr "Bir müşterinin belirli bir katman için uygun olup olmadığını görmek için bu döneme ait istatistikler kontrol edilir."
+
+msgctxt "SettingsOptions::client_tiers::upgrade_tier_option"
+msgid "Customer tier can upgrade"
+msgstr "Müşteri katmanı yükseltebilir"
+
+msgctxt "SettingsOptions::client_tiers::automatic_downgrade"
+msgid "Tier check can downgrade customer's tier"
+msgstr "Katman kontrolü, müşterinin katmanını düşürebilir"
+
+msgctxt "Languages::client_tiers.minimum_spend_value"
+msgid "Required spendings"
+msgstr "Gerekli harcamalar"
+
+msgctxt "Languages::client_tiers.tooltip_minimum_spend_value"
+msgid "Set 0 if you don't want this user group to be assigned automatically. Otherwise, customer can get this user group after spending the specified sum during the reporting period set in the Client Tiers add-on."
+msgstr "Bu kullanıcı grubunun otomatik olarak atanmasını istemiyorsanız 0 olarak ayarlayın. Aksi takdirde, müşteri, Müşteri Katmanları eklentisinde belirlenen raporlama döneminde belirtilen tutarı harcadıktan sonra bu kullanıcı grubunu alabilir."
+
+msgctxt "Languages::client_tiers.bronze_level_customers"
+msgid "Bronze level customers"
+msgstr "Bronz seviye müşteriler"
+
+msgctxt "Languages::client_tiers.silver_level_customers"
+msgid "Silver level customers"
+msgstr "Gümüş seviye müşteriler"
+
+msgctxt "Languages::client_tiers.gold_level_customers"
+msgid "Gold level customers"
+msgstr "Altın seviye müşteriler"
+
+msgctxt "Languages::client_tiers.client_success_set_tier"
+msgid "[username] spent [total] amount in reported period and moved to [new_group]"
+msgstr "[username] , rapor edilen dönemde [total] miktar harcadı ve [new_group]taşındı"
+
+msgctxt "Languages::client_tiers.client_fail_set_new_tier"
+msgid "Couldn't assign user group [new_group] to customer with id [user_id]. Customer spent [total] in the reporting period, which is more than the required spendings for this user group."
+msgstr "[new_group] kullanıcı grubu, [user_id]kimliğine sahip müşteriye atanamadı. Müşteri, raporlama döneminde bu kullanıcı grubu için gerekli harcamalardan [total] fazlasını harcadı."
+
+msgctxt "Languages::client_tiers.client_fail_unset_old_tier"
+msgid "Couldn't remove user group [old_group] from customer with id [user_id]. With [total] spent in the reporting period, customer shouldn't be a part of this user group."
+msgstr "[old_group] kullanıcı grubu, [user_id]kimliğine sahip müşteriden kaldırılamadı. Raporlama döneminde harcanan [total] adet müşteri bu kullanıcı grubunun bir parçası olmamalıdır."
+
+msgctxt "Languages::client_tiers.client_success_unset_tier"
+msgid "Customer [username] was successfully removed from [old_group] due to [total] spent in reporting period."
+msgstr "Müşteri [username] , raporlama döneminde harcanan [total] nedeniyle [old_group] başarıyla kaldırıldı."
+
+msgctxt "Languages::log_type_client_tiers"
+msgid "Client Tiers"
+msgstr "Müşteri Katmanları"
+
+msgctxt "Languages::log_action_ct_success"
+msgid "Success"
+msgstr "Başarı"
+
+msgctxt "Languages::log_action_ct_failure"
+msgid "Errors"
+msgstr "Hatalar"
+
+msgctxt "Languages::client_tiers.previous_30_days"
+msgid "Previous 30 days"
+msgstr "Önceki 30 gün"
+
+msgctxt "Languages::client_tiers.previous_month"
+msgid "Previous month"
+msgstr "Geçtiğimiz ay"
+
+msgctxt "Languages::client_tiers.previous_12_months"
+msgid "Previous 12 months"
+msgstr "Önceki 12 ay"
+
+msgctxt "Languages::client_tiers.previous_year"
+msgid "Previous year"
+msgstr "Geçen yıl"
+
+msgctxt "Languages::client_tiers.after_completed_purchase"
+msgid "After the order is paid"
+msgstr "Sipariş ödendikten sonra"
+
+msgctxt "Languages::client_tiers.after_tier_check"
+msgid "After tier check only"
+msgstr "Yalnızca katman kontrolünden sonra"
+
+msgctxt "Languages::client_tiers.update_tiers"
+msgid "Tier check"
+msgstr "Katman kontrolü"
+
+msgctxt "Languages::client_tiers.run_recalculation"
+msgid "Check customer tiers now"
+msgstr "Müşteri katmanlarını şimdi kontrol edin"
+
+msgctxt "Languages::client_tiers.run_tiers_updating_by_cron"
+msgid "Updating client tiers is the resource-intensive process. It's recommended to run it automatically at certain time intervals.<br>To do it, add the following command to <a href=\"https://en.wikipedia.org/wiki/Cron\" target=\"_blank\">Cron</a>:"
+msgstr "İstemci katmanlarını güncellemek, kaynak yoğun bir süreçtir. Belirli zaman aralıklarında otomatik olarak çalıştırılması önerilir.<br>Bunu yapmak için <a href=\"https://en.wikipedia.org/wiki/Cron\" target=\"_blank\">Cron</a>aşağıdaki komutu ekleyin:"
+
+msgctxt "Languages::client_tiers.all_been_recalculated"
+msgid "Tiers have been checked and updated"
+msgstr "Katmanlar kontrol edildi ve güncellendi"
+
+msgctxt "Languages::client_tiers.silver_promotion"
+msgid "Silver tier promotion"
+msgstr "Gümüş seviye promosyonu"
+
+msgctxt "Languages::client_tiers.bronze_promotion"
+msgid "Bronze tier promotion"
+msgstr "Bronz seviye promosyonu"
+
+msgctxt "Languages::client_tiers.gold_promotion"
+msgid "Gold tier promotion"
+msgstr "Altın seviye promosyonu"
+
+msgctxt "Languages::client_tiers.silver_promotion.detailed_description"
+msgid "Only Silver Level Customers are eligible for this promotion."
+msgstr "Bu promosyondan yalnızca Gümüş Seviye Müşteriler yararlanabilir."
+
+msgctxt "Languages::client_tiers.silver_promotion.short_description"
+msgid "This promotion was created automatically as part of the Client Tiers add-on. It applies only to Silver Level Customers."
+msgstr "Bu promosyon, Müşteri Katmanları eklentisinin bir parçası olarak otomatik olarak oluşturulmuştur. Yalnızca Gümüş Düzey Müşteriler için geçerlidir."
+
+msgctxt "Languages::client_tiers.bronze_promotion.detailed_description"
+msgid "Only Bronze Level Customers are eligible for this promotion."
+msgstr "Bu promosyondan yalnızca Bronz Seviye Müşteriler yararlanabilir."
+
+msgctxt "Languages::client_tiers.bronze_promotion.short_description"
+msgid "This promotion was created automatically as part of the Client Tiers add-on. It applies only to Bronze Level Customers."
+msgstr "Bu promosyon, Müşteri Katmanları eklentisinin bir parçası olarak otomatik olarak oluşturulmuştur. Yalnızca Bronz Seviye Müşteriler için geçerlidir."
+
+msgctxt "Languages::client_tiers.gold_promotion.detailed_description"
+msgid "Only Gold Level Customers are eligible for this promotion."
+msgstr "Bu promosyondan yalnızca Altın Seviye Müşteriler yararlanabilir."
+
+msgctxt "Languages::client_tiers.gold_promotion.short_description"
+msgid "This promotion was created automatically as part of the Client Tiers add-on. It applies only to Gold Level Customers."
+msgstr "Bu promosyon, Müşteri Katmanları eklentisinin bir parçası olarak otomatik olarak oluşturulmuştur. Yalnızca Altın Seviye Müşteriler için geçerlidir."
+
+msgctxt "Languages::client_tiers.removed_from_old_group"
+msgid "Removed from user group"
+msgstr "Kullanıcı grubundan kaldırıldı"
+
+msgctxt "Languages::client_tiers.moved_to_new_group"
+msgid "Moved to user group"
+msgstr "Kullanıcı grubuna taşındı"
+
+msgctxt "Languages::client_tiers.installation_message"
+msgid "To help you get started, we have added user groups for Gold, Silver, and Bronze Level Customers, as well as corresponding promotions. Please check <a href=\"[user_groups]\" target=\"_blank\">user groups</a> and <a href=\"[promotions]\" target=\"_blank\">promotions</a>, and adjust them as needed. You can also delete them and create your own."
+msgstr "Başlamanıza yardımcı olmak için Altın, Gümüş ve Bronz Düzeyindeki Müşteriler için kullanıcı gruplarının yanı sıra ilgili promosyonları ekledik. Lütfen <a href=\"[user_groups]\" target=\"_blank\">kullanıcı grubu</a> ve <a href=\"[promotions]\" target=\"_blank\">promosyonlarını</a>kontrol edin ve bunları gerektiği gibi ayarlayın. Ayrıca bunları silebilir ve kendinizinkini oluşturabilirsiniz."
+

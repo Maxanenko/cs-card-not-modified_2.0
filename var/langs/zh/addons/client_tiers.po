@@ -1,0 +1,178 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: cs-cart-latest\n"
+"X-Crowdin-Project-ID: 50163\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /release-4.15.1/addons/client_tiers.po\n"
+"X-Crowdin-File-ID: 6570\n"
+"PO-Revision-Date: 2022-07-20 14:35\n"
+
+msgctxt "Addons::name::client_tiers"
+msgid "Client tiers"
+msgstr "客户层"
+
+msgctxt "Addons::description::client_tiers"
+msgid "Automatically assigns and removes customer's user group depending on money spent. Allows you to rank your customers (for example, bronze, silver, gold customers)."
+msgstr "根据花费的钱自动分配和删除客户的用户组。允许您对客户进行排名（例如，青铜、白银、黄金客户）。"
+
+msgctxt "SettingsSections::client_tiers::general"
+msgid "General"
+msgstr "一般的"
+
+msgctxt "SettingsOptions::client_tiers::tiers_reporting_period"
+msgid "Reporting period"
+msgstr "报告期"
+
+msgctxt "SettingsTooltips::client_tiers::tiers_reporting_period"
+msgid "Statistics from this period is checked to see if a customer is eligible for a certain tier"
+msgstr "检查此期间的统计数据以查看客户是否有资格获得某个等级"
+
+msgctxt "SettingsOptions::client_tiers::upgrade_tier_option"
+msgid "Customer tier can upgrade"
+msgstr "客户等级可以升级"
+
+msgctxt "SettingsOptions::client_tiers::automatic_downgrade"
+msgid "Tier check can downgrade customer's tier"
+msgstr "层级检查可以降级客户的层级"
+
+msgctxt "Languages::client_tiers.minimum_spend_value"
+msgid "Required spendings"
+msgstr "所需支出"
+
+msgctxt "Languages::client_tiers.tooltip_minimum_spend_value"
+msgid "Set 0 if you don't want this user group to be assigned automatically. Otherwise, customer can get this user group after spending the specified sum during the reporting period set in the Client Tiers add-on."
+msgstr "如果您不希望自动分配此用户组，请设置为 0。否则，客户可以在客户层附加组件中设置的报告期内花费指定金额后获得此用户组。"
+
+msgctxt "Languages::client_tiers.bronze_level_customers"
+msgid "Bronze level customers"
+msgstr "青铜级客户"
+
+msgctxt "Languages::client_tiers.silver_level_customers"
+msgid "Silver level customers"
+msgstr "白银级客户"
+
+msgctxt "Languages::client_tiers.gold_level_customers"
+msgid "Gold level customers"
+msgstr "金牌客户"
+
+msgctxt "Languages::client_tiers.client_success_set_tier"
+msgid "[username] spent [total] amount in reported period and moved to [new_group]"
+msgstr "[username] 在报告期间花费 [total] 金额并移至 [new_group]"
+
+msgctxt "Languages::client_tiers.client_fail_set_new_tier"
+msgid "Couldn't assign user group [new_group] to customer with id [user_id]. Customer spent [total] in the reporting period, which is more than the required spendings for this user group."
+msgstr "无法将用户组 [new_group] 分配给 ID 为 [user_id]的客户。客户在报告期间花费了 [total] 次，超过了该用户组所需的支出。"
+
+msgctxt "Languages::client_tiers.client_fail_unset_old_tier"
+msgid "Couldn't remove user group [old_group] from customer with id [user_id]. With [total] spent in the reporting period, customer shouldn't be a part of this user group."
+msgstr "无法从 ID 为 [user_id]的客户中删除用户组 [old_group] 。在报告期间花费了 [total] ，客户不应该是该用户组的一部分。"
+
+msgctxt "Languages::client_tiers.client_success_unset_tier"
+msgid "Customer [username] was successfully removed from [old_group] due to [total] spent in reporting period."
+msgstr "由于报告期间花费了 [total] ，客户 [username] 已成功从 [old_group] 中删除。"
+
+msgctxt "Languages::log_type_client_tiers"
+msgid "Client Tiers"
+msgstr "客户层"
+
+msgctxt "Languages::log_action_ct_success"
+msgid "Success"
+msgstr "成功"
+
+msgctxt "Languages::log_action_ct_failure"
+msgid "Errors"
+msgstr "错误"
+
+msgctxt "Languages::client_tiers.previous_30_days"
+msgid "Previous 30 days"
+msgstr "前 30 天"
+
+msgctxt "Languages::client_tiers.previous_month"
+msgid "Previous month"
+msgstr "前一个月"
+
+msgctxt "Languages::client_tiers.previous_12_months"
+msgid "Previous 12 months"
+msgstr "过去 12 个月"
+
+msgctxt "Languages::client_tiers.previous_year"
+msgid "Previous year"
+msgstr "上一年"
+
+msgctxt "Languages::client_tiers.after_completed_purchase"
+msgid "After the order is paid"
+msgstr "订单付款后"
+
+msgctxt "Languages::client_tiers.after_tier_check"
+msgid "After tier check only"
+msgstr "仅在层级检查之后"
+
+msgctxt "Languages::client_tiers.update_tiers"
+msgid "Tier check"
+msgstr "层级检查"
+
+msgctxt "Languages::client_tiers.run_recalculation"
+msgid "Check customer tiers now"
+msgstr "立即查看客户等级"
+
+msgctxt "Languages::client_tiers.run_tiers_updating_by_cron"
+msgid "Updating client tiers is the resource-intensive process. It's recommended to run it automatically at certain time intervals.<br>To do it, add the following command to <a href=\"https://en.wikipedia.org/wiki/Cron\" target=\"_blank\">Cron</a>:"
+msgstr "更新客户端层是一个资源密集型过程。建议在特定时间间隔自动运行它。<br>为此，请将以下命令添加到 <a href=\"https://en.wikipedia.org/wiki/Cron\" target=\"_blank\">Cron</a>："
+
+msgctxt "Languages::client_tiers.all_been_recalculated"
+msgid "Tiers have been checked and updated"
+msgstr "层级已经过检查和更新"
+
+msgctxt "Languages::client_tiers.silver_promotion"
+msgid "Silver tier promotion"
+msgstr "白银级促销"
+
+msgctxt "Languages::client_tiers.bronze_promotion"
+msgid "Bronze tier promotion"
+msgstr "青铜级促销"
+
+msgctxt "Languages::client_tiers.gold_promotion"
+msgid "Gold tier promotion"
+msgstr "黄金级促销"
+
+msgctxt "Languages::client_tiers.silver_promotion.detailed_description"
+msgid "Only Silver Level Customers are eligible for this promotion."
+msgstr "只有银级客户才有资格参加此促销活动。"
+
+msgctxt "Languages::client_tiers.silver_promotion.short_description"
+msgid "This promotion was created automatically as part of the Client Tiers add-on. It applies only to Silver Level Customers."
+msgstr "此促销活动是作为客户层附加组件的一部分自动创建的。它仅适用于银级客户。"
+
+msgctxt "Languages::client_tiers.bronze_promotion.detailed_description"
+msgid "Only Bronze Level Customers are eligible for this promotion."
+msgstr "只有青铜级客户才有资格参加此促销活动。"
+
+msgctxt "Languages::client_tiers.bronze_promotion.short_description"
+msgid "This promotion was created automatically as part of the Client Tiers add-on. It applies only to Bronze Level Customers."
+msgstr "此促销活动是作为客户层附加组件的一部分自动创建的。它仅适用于青铜级客户。"
+
+msgctxt "Languages::client_tiers.gold_promotion.detailed_description"
+msgid "Only Gold Level Customers are eligible for this promotion."
+msgstr "只有黄金级客户才有资格参加此促销活动。"
+
+msgctxt "Languages::client_tiers.gold_promotion.short_description"
+msgid "This promotion was created automatically as part of the Client Tiers add-on. It applies only to Gold Level Customers."
+msgstr "此促销活动是作为客户层附加组件的一部分自动创建的。它仅适用于黄金级客户。"
+
+msgctxt "Languages::client_tiers.removed_from_old_group"
+msgid "Removed from user group"
+msgstr "从用户组中删除"
+
+msgctxt "Languages::client_tiers.moved_to_new_group"
+msgid "Moved to user group"
+msgstr "移至用户组"
+
+msgctxt "Languages::client_tiers.installation_message"
+msgid "To help you get started, we have added user groups for Gold, Silver, and Bronze Level Customers, as well as corresponding promotions. Please check <a href=\"[user_groups]\" target=\"_blank\">user groups</a> and <a href=\"[promotions]\" target=\"_blank\">promotions</a>, and adjust them as needed. You can also delete them and create your own."
+msgstr "为了帮助您入门，我们添加了金牌、银牌和铜牌客户的用户组，以及相应的促销活动。请检查 <a href=\"[user_groups]\" target=\"_blank\">用户组</a> 和 <a href=\"[promotions]\" target=\"_blank\">促销</a>，并根据需要进行调整。您也可以删除它们并创建自己的。"
+

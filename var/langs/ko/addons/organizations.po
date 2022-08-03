@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Korean\n"
+"Language: ko_KR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: cs-cart-latest\n"
+"X-Crowdin-Project-ID: 50163\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /release-4.15.1/addons/organizations.po\n"
+"X-Crowdin-File-ID: 6624\n"
+"PO-Revision-Date: 2022-07-20 14:34\n"
+
+msgctxt "Addons::name::organizations"
+msgid "Organizations and representatives [Beta]"
+msgstr "단체 및 대표 [Beta]"
+
+msgctxt "Addons::description::organizations"
+msgid "Allows your customers to create organizations (legal entities). An organization can have multiple customer accounts associated with it. They act as representatives of the organization."
+msgstr "고객이 조직(법인)을 만들 수 있습니다. 조직에는 연결된 여러 고객 계정이 있을 수 있습니다. 그들은 조직의 대표자 역할을 합니다."
+
+msgctxt "SettingsSections::organizations::general"
+msgid "General"
+msgstr "일반적인"
+
+msgctxt "SettingsOptions::organizations::b2b_storefront_ids"
+msgid "B2B Storefronts"
+msgstr "B2B 점포"
+
+msgctxt "Languages::profile_types_section_organization"
+msgid "Organization information"
+msgstr "조직 정보"
+
+msgctxt "Languages::organizations"
+msgid "Organizations"
+msgstr "조직"
+
+msgctxt "Languages::organizations.organization"
+msgid "Organization"
+msgstr "조직"
+
+msgctxt "Languages::organizations.user_role_owner"
+msgid "Owner"
+msgstr "소유자"
+
+msgctxt "Languages::organizations.user_role_representative"
+msgid "Representative"
+msgstr "대표"
+
+msgctxt "Languages::organizations_menu_description"
+msgid "List of the store's organizations."
+msgstr "상점의 조직 목록입니다."
+
+msgctxt "Languages::organizations.new_organization"
+msgid "New organization"
+msgstr "새 조직"
+
+msgctxt "Languages::organizations.edit_organization"
+msgid "Edit organization: [name]"
+msgstr "조직 수정: [name]"
+
+msgctxt "Languages::organizations.promotion_cond_once_per_organization"
+msgid "Once for organization"
+msgstr "조직을 위해 한 번"
+
+msgctxt "Languages::organizations.promotion_cond_organizations"
+msgid "Organizations"
+msgstr "조직"
+
+msgctxt "Languages::promotion_cond_organizations"
+msgid "Organizations"
+msgstr "조직"
+
+msgctxt "Languages::organizations.organization_details"
+msgid "Organization details"
+msgstr "조직 세부정보"
+
+msgctxt "Languages::organizations.manage_users"
+msgid "Manage users"
+msgstr "사용자 관리"
+
+msgctxt "Languages::organizations.last_sign_in"
+msgid "Last sign in"
+msgstr "마지막 로그인"
+

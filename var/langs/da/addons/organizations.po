@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Danish\n"
+"Language: da_DK\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: cs-cart-latest\n"
+"X-Crowdin-Project-ID: 50163\n"
+"X-Crowdin-Language: da\n"
+"X-Crowdin-File: /release-4.15.1/addons/organizations.po\n"
+"X-Crowdin-File-ID: 6624\n"
+"PO-Revision-Date: 2022-07-20 14:33\n"
+
+msgctxt "Addons::name::organizations"
+msgid "Organizations and representatives [Beta]"
+msgstr "Organisationer og repræsentanter [Beta]"
+
+msgctxt "Addons::description::organizations"
+msgid "Allows your customers to create organizations (legal entities). An organization can have multiple customer accounts associated with it. They act as representatives of the organization."
+msgstr "Giver dine kunder mulighed for at oprette organisationer (juridiske enheder). En organisation kan have flere kundekonti tilknyttet. De fungerer som repræsentanter for organisationen."
+
+msgctxt "SettingsSections::organizations::general"
+msgid "General"
+msgstr "Generel"
+
+msgctxt "SettingsOptions::organizations::b2b_storefront_ids"
+msgid "B2B Storefronts"
+msgstr "B2B butiksfacader"
+
+msgctxt "Languages::profile_types_section_organization"
+msgid "Organization information"
+msgstr "Organisationsoplysninger"
+
+msgctxt "Languages::organizations"
+msgid "Organizations"
+msgstr "Organisationer"
+
+msgctxt "Languages::organizations.organization"
+msgid "Organization"
+msgstr "Organisation"
+
+msgctxt "Languages::organizations.user_role_owner"
+msgid "Owner"
+msgstr "Ejer"
+
+msgctxt "Languages::organizations.user_role_representative"
+msgid "Representative"
+msgstr "Repræsentant"
+
+msgctxt "Languages::organizations_menu_description"
+msgid "List of the store's organizations."
+msgstr "Liste over butikkens organisationer."
+
+msgctxt "Languages::organizations.new_organization"
+msgid "New organization"
+msgstr "Ny organisation"
+
+msgctxt "Languages::organizations.edit_organization"
+msgid "Edit organization: [name]"
+msgstr "Rediger organisation: [name]"
+
+msgctxt "Languages::organizations.promotion_cond_once_per_organization"
+msgid "Once for organization"
+msgstr "En gang til organisation"
+
+msgctxt "Languages::organizations.promotion_cond_organizations"
+msgid "Organizations"
+msgstr "Organisationer"
+
+msgctxt "Languages::promotion_cond_organizations"
+msgid "Organizations"
+msgstr "Organisationer"
+
+msgctxt "Languages::organizations.organization_details"
+msgid "Organization details"
+msgstr "Organisationsoplysninger"
+
+msgctxt "Languages::organizations.manage_users"
+msgid "Manage users"
+msgstr "Administrer brugere"
+
+msgctxt "Languages::organizations.last_sign_in"
+msgid "Last sign in"
+msgstr "Sidste log ind"
+

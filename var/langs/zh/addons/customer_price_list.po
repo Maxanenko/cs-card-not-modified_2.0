@@ -1,0 +1,110 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: cs-cart-latest\n"
+"X-Crowdin-Project-ID: 50163\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /release-4.15.1/addons/customer_price_list.po\n"
+"X-Crowdin-File-ID: 6572\n"
+"PO-Revision-Date: 2022-07-20 14:35\n"
+
+msgctxt "Addons::name::customer_price_list"
+msgid "Price list for customers"
+msgstr "客户价目表"
+
+msgctxt "Addons::description::customer_price_list"
+msgid "Allows customers to download a price list either with all the products, or with the products in their cart."
+msgstr "允许客户下载包含所有产品或购物车中产品的价目表。"
+
+msgctxt "SettingsSections::customer_price_list::general"
+msgid "General"
+msgstr "一般的"
+
+msgctxt "SettingsSections::customer_price_list::files"
+msgid "Files"
+msgstr "文件"
+
+msgctxt "SettingsOptions::customer_price_list::price_list_fields"
+msgid "Fields"
+msgstr "字段"
+
+msgctxt "SettingsOptions::customer_price_list::price_list_sorting"
+msgid "Sort by"
+msgstr "排序方式"
+
+msgctxt "SettingsOptions::customer_price_list::price_list_group_by_category"
+msgid "Group by category"
+msgstr "按类别分组"
+
+msgctxt "SettingsOptions::customer_price_list::show_download_link_on_profile"
+msgid "Show download link in \"My Account\""
+msgstr "在“我的帐户”中显示下载链接"
+
+msgctxt "SettingsOptions::customer_price_list::show_download_link_on_cart"
+msgid "Show download link in the cart"
+msgstr "在购物车中显示下载链接"
+
+msgctxt "Languages::customer_price_list.attention"
+msgid "Attention"
+msgstr "注意力"
+
+msgctxt "Languages::customer_price_list.run_price_list_updating_by_cron"
+msgid "Price list generation requires a lot of resources. It's best to generate price lists automatically at certain time intervals.To do it, add the following command to <a href=\"https://en.wikipedia.org/wiki/Cron\" target=\"_blank\">Cron:</a>"
+msgstr "价目表生成需要大量资源。最好在特定时间间隔自动生成价目表。为此，请将以下命令添加到 <a href=\"https://en.wikipedia.org/wiki/Cron\" target=\"_blank\">Cron：</a>"
+
+msgctxt "Languages::customer_price_list.check_requirements"
+msgid "Price list generation uses the proc_open PHP function. Please make sure this function is available in the CLI mode. To check all the requirements, run the following script in the command line of your server:"
+msgstr "价目表生成使用 proc_open PHP 函数。请确保此功能在 CLI 模式下可用。要检查所有要求，请在服务器的命令行中运行以下脚本："
+
+msgctxt "Languages::customer_price_list.updated_at"
+msgid "Updated at"
+msgstr "更新于"
+
+msgctxt "Languages::customer_price_list.not_created_yet"
+msgid "Not created yet"
+msgstr "尚未创建"
+
+msgctxt "Languages::customer_price_list.enable_generating_price_list"
+msgid "Generate own price list"
+msgstr "生成自己的价目表"
+
+msgctxt "Languages::customer_price_list.tooltip_enable_generating_price_list"
+msgid "If you plan to have different prices for this user group, generate an own price list for it. Otherwise, members of this group will get the common price list available to all customers."
+msgstr "如果您计划为此用户组设置不同的价格，请为其生成自己的价格表。否则，该组的成员将获得可供所有客户使用的通用价目表。"
+
+msgctxt "Languages::customer_price_list.price_list_priority"
+msgid "Price list priority"
+msgstr "价目表优先级"
+
+msgctxt "Languages::customer_price_list.tooltip_price_list_priority"
+msgid "Determines which price list a user will get when he or she is a member of multiple groups with own price lists. Such users get the price list that has the highest number in \"Priority\"."
+msgstr "确定当用户是具有自己的价目表的多个组的成员时，他或她将获得哪个价目表。此类用户获得“优先级”中编号最高的价目表。"
+
+msgctxt "Languages::customer_price_list.price_list_generation_error"
+msgid "Sorry, we couldn't find your price list. Please try again later or contact us and let us know about this problem."
+msgstr "抱歉，我们找不到您的价目表。请稍后再试或联系我们，让我们知道这个问题。"
+
+msgctxt "Languages::customer_price_list.account.download_price_list"
+msgid "Download price list"
+msgstr "下载价目表"
+
+msgctxt "Languages::customer_price_list.cart.download_price_list"
+msgid "Download price list"
+msgstr "下载价目表"
+
+msgctxt "Languages::customer_price_list.starting_generate_price_list"
+msgid "[[storefront]]: [[usergroup]]: starting price list generation"
+msgstr "[[storefront]]：[[usergroup]]：开始价格表生成"
+
+msgctxt "Languages::customer_price_list.ending_generate_price_list"
+msgid "[[storefront]]: [[usergroup]]: ending price list generation"
+msgstr "[[storefront]]：[[usergroup]]：结束价目表生成"
+
+msgctxt "Languages::customer_price_list.generate_price_list_error"
+msgid "[[storefront]]: [[usergroup]]: [error]"
+msgstr "[[storefront]]：[[usergroup]]： [error]"
+

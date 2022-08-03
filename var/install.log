@@ -1,0 +1,24 @@
+[0.00000] [Error] Server configuration doesn't meet the requirements. Please contact your server administrator or hosting provider to address the issues described below
+[0.00000] [Error] MySQL database name can contain only Latin characters, numbers, and underscores
+[0.00000] [Notice] Could not connect to database
+[0.00018] [Error] MySQL settings are not valid
+[0.00000] [Notice] Creating database scheme
+[5.69400] [Notice] Importing data
+[6.06575] [Notice] Creating demo
+[6.53895] [Notice] Installing additional language ru
+[6.77977] [Notice] Installing additional language ru
+[0.00000] [Warning] The specified database is not empty. Overwrite?Yes 
+[0.00000] [Warning] The specified database is not empty. Overwrite?Yes 
+[0.00000] [Warning] The specified database is not empty. Overwrite?Yes 
+[2.12480] [Notice] Creating database scheme
+[7.93789] [Notice] Importing data
+[8.30985] [Notice] Creating demo
+[8.75982] [Notice] Installing additional language ru
+[8.99446] [Notice] Installing additional language ru
+[0.00000] [Warning] The specified database is not empty. Overwrite?Yes 
+[0.00000] [Warning] The specified database is not empty. Overwrite?Yes 
+[2.07676] [Notice] Creating database scheme
+[7.75658] [Notice] Importing data
+[8.11858] [Notice] Creating demo
+[8.56562] [Notice] Installing additional language ru
+[8.79537] [Notice] Installing additional language ru

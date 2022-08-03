@@ -1,0 +1,110 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Korean\n"
+"Language: ko_KR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: cs-cart-latest\n"
+"X-Crowdin-Project-ID: 50163\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /release-4.15.1/addons/customer_price_list.po\n"
+"X-Crowdin-File-ID: 6572\n"
+"PO-Revision-Date: 2022-07-20 14:34\n"
+
+msgctxt "Addons::name::customer_price_list"
+msgid "Price list for customers"
+msgstr "고객용 가격표"
+
+msgctxt "Addons::description::customer_price_list"
+msgid "Allows customers to download a price list either with all the products, or with the products in their cart."
+msgstr "고객이 모든 제품 또는 장바구니에 있는 제품과 함께 가격 목록을 다운로드할 수 있습니다."
+
+msgctxt "SettingsSections::customer_price_list::general"
+msgid "General"
+msgstr "일반적인"
+
+msgctxt "SettingsSections::customer_price_list::files"
+msgid "Files"
+msgstr "파일"
+
+msgctxt "SettingsOptions::customer_price_list::price_list_fields"
+msgid "Fields"
+msgstr "필드"
+
+msgctxt "SettingsOptions::customer_price_list::price_list_sorting"
+msgid "Sort by"
+msgstr "정렬 기준"
+
+msgctxt "SettingsOptions::customer_price_list::price_list_group_by_category"
+msgid "Group by category"
+msgstr "범주별 그룹화"
+
+msgctxt "SettingsOptions::customer_price_list::show_download_link_on_profile"
+msgid "Show download link in \"My Account\""
+msgstr "\"내 계정\"에 다운로드 링크 표시"
+
+msgctxt "SettingsOptions::customer_price_list::show_download_link_on_cart"
+msgid "Show download link in the cart"
+msgstr "장바구니에 다운로드 링크 표시"
+
+msgctxt "Languages::customer_price_list.attention"
+msgid "Attention"
+msgstr "주목"
+
+msgctxt "Languages::customer_price_list.run_price_list_updating_by_cron"
+msgid "Price list generation requires a lot of resources. It's best to generate price lists automatically at certain time intervals.To do it, add the following command to <a href=\"https://en.wikipedia.org/wiki/Cron\" target=\"_blank\">Cron:</a>"
+msgstr "가격표 생성에는 많은 리소스가 필요합니다. 특정 시간 간격으로 가격 목록을 자동으로 생성하는 것이 가장 좋습니다. 이렇게 하려면 <a href=\"https://en.wikipedia.org/wiki/Cron\" target=\"_blank\">Cron에 다음 명령을 추가하십시오.</a>"
+
+msgctxt "Languages::customer_price_list.check_requirements"
+msgid "Price list generation uses the proc_open PHP function. Please make sure this function is available in the CLI mode. To check all the requirements, run the following script in the command line of your server:"
+msgstr "가격표 생성은 proc_open PHP 함수를 사용합니다. CLI 모드에서 이 기능을 사용할 수 있는지 확인하십시오. 모든 요구 사항을 확인하려면 서버의 명령줄에서 다음 스크립트를 실행하십시오."
+
+msgctxt "Languages::customer_price_list.updated_at"
+msgid "Updated at"
+msgstr "업데이트 날짜"
+
+msgctxt "Languages::customer_price_list.not_created_yet"
+msgid "Not created yet"
+msgstr "아직 생성되지 않음"
+
+msgctxt "Languages::customer_price_list.enable_generating_price_list"
+msgid "Generate own price list"
+msgstr "자체 가격 목록 생성"
+
+msgctxt "Languages::customer_price_list.tooltip_enable_generating_price_list"
+msgid "If you plan to have different prices for this user group, generate an own price list for it. Otherwise, members of this group will get the common price list available to all customers."
+msgstr "이 사용자 그룹에 대해 다른 가격을 사용하려는 경우 고유한 가격 목록을 생성하십시오. 그렇지 않으면 이 그룹의 구성원은 모든 고객이 사용할 수 있는 공통 가격표를 받게 됩니다."
+
+msgctxt "Languages::customer_price_list.price_list_priority"
+msgid "Price list priority"
+msgstr "가격 목록 우선순위"
+
+msgctxt "Languages::customer_price_list.tooltip_price_list_priority"
+msgid "Determines which price list a user will get when he or she is a member of multiple groups with own price lists. Such users get the price list that has the highest number in \"Priority\"."
+msgstr "사용자가 자체 가격 목록이 있는 여러 그룹의 구성원인 경우 사용자가 받게 될 가격 목록을 결정합니다. 이러한 사용자는 \"우선 순위\"에서 가장 높은 번호를 가진 가격 목록을 얻습니다."
+
+msgctxt "Languages::customer_price_list.price_list_generation_error"
+msgid "Sorry, we couldn't find your price list. Please try again later or contact us and let us know about this problem."
+msgstr "죄송합니다. 가격 목록을 찾을 수 없습니다. 나중에 다시 시도하거나 저희에게 연락하여 이 문제에 대해 알려주십시오."
+
+msgctxt "Languages::customer_price_list.account.download_price_list"
+msgid "Download price list"
+msgstr "가격표 다운로드"
+
+msgctxt "Languages::customer_price_list.cart.download_price_list"
+msgid "Download price list"
+msgstr "가격표 다운로드"
+
+msgctxt "Languages::customer_price_list.starting_generate_price_list"
+msgid "[[storefront]]: [[usergroup]]: starting price list generation"
+msgstr "[[storefront]]: [[usergroup]]: 가격 목록 생성 시작"
+
+msgctxt "Languages::customer_price_list.ending_generate_price_list"
+msgid "[[storefront]]: [[usergroup]]: ending price list generation"
+msgstr "[[storefront]]: [[usergroup]]: 가격 목록 생성 종료"
+
+msgctxt "Languages::customer_price_list.generate_price_list_error"
+msgid "[[storefront]]: [[usergroup]]: [error]"
+msgstr "[[storefront]]: [[usergroup]]: [error]"
+

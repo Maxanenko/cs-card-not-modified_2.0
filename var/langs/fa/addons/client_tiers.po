@@ -1,0 +1,178 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Persian\n"
+"Language: fa_IR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: cs-cart-latest\n"
+"X-Crowdin-Project-ID: 50163\n"
+"X-Crowdin-Language: fa\n"
+"X-Crowdin-File: /release-4.15.1/addons/client_tiers.po\n"
+"X-Crowdin-File-ID: 6570\n"
+"PO-Revision-Date: 2022-07-20 14:35\n"
+
+msgctxt "Addons::name::client_tiers"
+msgid "Client tiers"
+msgstr "لایه های مشتری"
+
+msgctxt "Addons::description::client_tiers"
+msgid "Automatically assigns and removes customer's user group depending on money spent. Allows you to rank your customers (for example, bronze, silver, gold customers)."
+msgstr "بسته به پول خرج شده، به طور خودکار گروه کاربری مشتری را اختصاص داده و حذف می کند. به شما امکان می دهد مشتریان خود را رتبه بندی کنید (مثلاً مشتریان برنزی، نقره ای، طلایی)."
+
+msgctxt "SettingsSections::client_tiers::general"
+msgid "General"
+msgstr "عمومی"
+
+msgctxt "SettingsOptions::client_tiers::tiers_reporting_period"
+msgid "Reporting period"
+msgstr "دوره گزارش"
+
+msgctxt "SettingsTooltips::client_tiers::tiers_reporting_period"
+msgid "Statistics from this period is checked to see if a customer is eligible for a certain tier"
+msgstr "آمارهای مربوط به این دوره بررسی می شود تا ببینیم آیا مشتری واجد شرایط یک ردیف خاص است یا خیر"
+
+msgctxt "SettingsOptions::client_tiers::upgrade_tier_option"
+msgid "Customer tier can upgrade"
+msgstr "سطح مشتری می تواند ارتقا یابد"
+
+msgctxt "SettingsOptions::client_tiers::automatic_downgrade"
+msgid "Tier check can downgrade customer's tier"
+msgstr "بررسی ردیف می تواند سطح مشتری را کاهش دهد"
+
+msgctxt "Languages::client_tiers.minimum_spend_value"
+msgid "Required spendings"
+msgstr "هزینه های مورد نیاز"
+
+msgctxt "Languages::client_tiers.tooltip_minimum_spend_value"
+msgid "Set 0 if you don't want this user group to be assigned automatically. Otherwise, customer can get this user group after spending the specified sum during the reporting period set in the Client Tiers add-on."
+msgstr "اگر نمی خواهید این گروه کاربری به طور خودکار اختصاص داده شود، 0 را تنظیم کنید. در غیر این صورت، مشتری می تواند این گروه کاربری را پس از صرف مبلغ مشخص شده در طول دوره گزارش تعیین شده در افزونه Client Tiers دریافت کند."
+
+msgctxt "Languages::client_tiers.bronze_level_customers"
+msgid "Bronze level customers"
+msgstr "مشتریان سطح برنز"
+
+msgctxt "Languages::client_tiers.silver_level_customers"
+msgid "Silver level customers"
+msgstr "مشتریان سطح نقره ای"
+
+msgctxt "Languages::client_tiers.gold_level_customers"
+msgid "Gold level customers"
+msgstr "مشتریان سطح طلا"
+
+msgctxt "Languages::client_tiers.client_success_set_tier"
+msgid "[username] spent [total] amount in reported period and moved to [new_group]"
+msgstr "[username] در دوره گزارش شده [total] مبلغ را خرج کرد و به [new_group]منتقل شد"
+
+msgctxt "Languages::client_tiers.client_fail_set_new_tier"
+msgid "Couldn't assign user group [new_group] to customer with id [user_id]. Customer spent [total] in the reporting period, which is more than the required spendings for this user group."
+msgstr "نمی توان گروه کاربری [new_group] را به مشتری با شناسه [user_id]اختصاص داد. مشتری در دوره گزارش [total] هزینه کرده است که بیش از هزینه های لازم برای این گروه کاربری است."
+
+msgctxt "Languages::client_tiers.client_fail_unset_old_tier"
+msgid "Couldn't remove user group [old_group] from customer with id [user_id]. With [total] spent in the reporting period, customer shouldn't be a part of this user group."
+msgstr "گروه کاربری [old_group] از مشتری با شناسه [user_id]حذف نشد. با [total] هزینه در دوره گزارش، مشتری نباید بخشی از این گروه کاربری باشد."
+
+msgctxt "Languages::client_tiers.client_success_unset_tier"
+msgid "Customer [username] was successfully removed from [old_group] due to [total] spent in reporting period."
+msgstr "مشتری [username] به دلیل [total] هزینه در دوره گزارش با موفقیت از [old_group] حذف شد."
+
+msgctxt "Languages::log_type_client_tiers"
+msgid "Client Tiers"
+msgstr "رده های مشتری"
+
+msgctxt "Languages::log_action_ct_success"
+msgid "Success"
+msgstr "موفقیت"
+
+msgctxt "Languages::log_action_ct_failure"
+msgid "Errors"
+msgstr "خطاها"
+
+msgctxt "Languages::client_tiers.previous_30_days"
+msgid "Previous 30 days"
+msgstr "30 روز قبل"
+
+msgctxt "Languages::client_tiers.previous_month"
+msgid "Previous month"
+msgstr "ماه گذشته"
+
+msgctxt "Languages::client_tiers.previous_12_months"
+msgid "Previous 12 months"
+msgstr "12 ماه قبل"
+
+msgctxt "Languages::client_tiers.previous_year"
+msgid "Previous year"
+msgstr "پارسال"
+
+msgctxt "Languages::client_tiers.after_completed_purchase"
+msgid "After the order is paid"
+msgstr "پس از پرداخت سفارش"
+
+msgctxt "Languages::client_tiers.after_tier_check"
+msgid "After tier check only"
+msgstr "فقط پس از بررسی ردیف"
+
+msgctxt "Languages::client_tiers.update_tiers"
+msgid "Tier check"
+msgstr "بررسی ردیف"
+
+msgctxt "Languages::client_tiers.run_recalculation"
+msgid "Check customer tiers now"
+msgstr "اکنون سطوح مشتریان را بررسی کنید"
+
+msgctxt "Languages::client_tiers.run_tiers_updating_by_cron"
+msgid "Updating client tiers is the resource-intensive process. It's recommended to run it automatically at certain time intervals.<br>To do it, add the following command to <a href=\"https://en.wikipedia.org/wiki/Cron\" target=\"_blank\">Cron</a>:"
+msgstr "به روز رسانی لایه های مشتری فرآیندی است که منابع فشرده ای دارد. توصیه می شود آن را به طور خودکار در بازه های زمانی مشخص اجرا کنید.<br>برای انجام این کار، دستور زیر را به <a href=\"https://en.wikipedia.org/wiki/Cron\" target=\"_blank\">Cron</a>اضافه کنید:"
+
+msgctxt "Languages::client_tiers.all_been_recalculated"
+msgid "Tiers have been checked and updated"
+msgstr "طبقات بررسی و به روز شده است"
+
+msgctxt "Languages::client_tiers.silver_promotion"
+msgid "Silver tier promotion"
+msgstr "ارتقاء ردیف نقره ای"
+
+msgctxt "Languages::client_tiers.bronze_promotion"
+msgid "Bronze tier promotion"
+msgstr "ارتقاء سطح برنز"
+
+msgctxt "Languages::client_tiers.gold_promotion"
+msgid "Gold tier promotion"
+msgstr "ارتقاء ردیف طلا"
+
+msgctxt "Languages::client_tiers.silver_promotion.detailed_description"
+msgid "Only Silver Level Customers are eligible for this promotion."
+msgstr "فقط مشتریان سطح نقره ای واجد شرایط این تبلیغ هستند."
+
+msgctxt "Languages::client_tiers.silver_promotion.short_description"
+msgid "This promotion was created automatically as part of the Client Tiers add-on. It applies only to Silver Level Customers."
+msgstr "این تبلیغ به صورت خودکار به عنوان بخشی از افزونه Client Tiers ایجاد شد. این فقط برای مشتریان سطح نقره ای اعمال می شود."
+
+msgctxt "Languages::client_tiers.bronze_promotion.detailed_description"
+msgid "Only Bronze Level Customers are eligible for this promotion."
+msgstr "فقط مشتریان سطح برنز واجد شرایط این تبلیغ هستند."
+
+msgctxt "Languages::client_tiers.bronze_promotion.short_description"
+msgid "This promotion was created automatically as part of the Client Tiers add-on. It applies only to Bronze Level Customers."
+msgstr "این تبلیغ به صورت خودکار به عنوان بخشی از افزونه Client Tiers ایجاد شد. این فقط برای مشتریان سطح برنز اعمال می شود."
+
+msgctxt "Languages::client_tiers.gold_promotion.detailed_description"
+msgid "Only Gold Level Customers are eligible for this promotion."
+msgstr "فقط مشتریان سطح طلایی واجد شرایط این تبلیغ هستند."
+
+msgctxt "Languages::client_tiers.gold_promotion.short_description"
+msgid "This promotion was created automatically as part of the Client Tiers add-on. It applies only to Gold Level Customers."
+msgstr "این تبلیغ به صورت خودکار به عنوان بخشی از افزونه Client Tiers ایجاد شد. این فقط برای مشتریان سطح طلا اعمال می شود."
+
+msgctxt "Languages::client_tiers.removed_from_old_group"
+msgid "Removed from user group"
+msgstr "از گروه کاربری حذف شد"
+
+msgctxt "Languages::client_tiers.moved_to_new_group"
+msgid "Moved to user group"
+msgstr "به گروه کاربری منتقل شد"
+
+msgctxt "Languages::client_tiers.installation_message"
+msgid "To help you get started, we have added user groups for Gold, Silver, and Bronze Level Customers, as well as corresponding promotions. Please check <a href=\"[user_groups]\" target=\"_blank\">user groups</a> and <a href=\"[promotions]\" target=\"_blank\">promotions</a>, and adjust them as needed. You can also delete them and create your own."
+msgstr "برای کمک به شما برای شروع، گروه های کاربری را برای مشتریان سطح طلایی، نقره ای و برنزی و همچنین تبلیغات مربوطه اضافه کرده ایم. لطفاً <a href=\"[user_groups]\" target=\"_blank\">گروه کاربر</a> و <a href=\"[promotions]\" target=\"_blank\">تبلیغات</a>را بررسی کنید و در صورت نیاز آنها را تنظیم کنید. شما همچنین می توانید آنها را حذف کرده و خود را ایجاد کنید."
+

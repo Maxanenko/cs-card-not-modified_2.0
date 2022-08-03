@@ -1,0 +1,178 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: cs-cart-latest\n"
+"X-Crowdin-Project-ID: 50163\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /release-4.15.1/addons/client_tiers.po\n"
+"X-Crowdin-File-ID: 6570\n"
+"PO-Revision-Date: 2022-07-20 14:33\n"
+
+msgctxt "Addons::name::client_tiers"
+msgid "Client tiers"
+msgstr "Client-Stufen"
+
+msgctxt "Addons::description::client_tiers"
+msgid "Automatically assigns and removes customer's user group depending on money spent. Allows you to rank your customers (for example, bronze, silver, gold customers)."
+msgstr "Weist die Benutzergruppe des Kunden je nach ausgegebenem Geld automatisch zu und entfernt sie. Ermöglicht es Ihnen, Ihre Kunden einzustufen (z. B. Bronze-, Silber-, Goldkunden)."
+
+msgctxt "SettingsSections::client_tiers::general"
+msgid "General"
+msgstr "Allgemein"
+
+msgctxt "SettingsOptions::client_tiers::tiers_reporting_period"
+msgid "Reporting period"
+msgstr "Berichtszeitraum"
+
+msgctxt "SettingsTooltips::client_tiers::tiers_reporting_period"
+msgid "Statistics from this period is checked to see if a customer is eligible for a certain tier"
+msgstr "Statistiken aus diesem Zeitraum werden überprüft, um festzustellen, ob ein Kunde für eine bestimmte Stufe berechtigt ist"
+
+msgctxt "SettingsOptions::client_tiers::upgrade_tier_option"
+msgid "Customer tier can upgrade"
+msgstr "Die Kundenstufe kann aktualisiert werden"
+
+msgctxt "SettingsOptions::client_tiers::automatic_downgrade"
+msgid "Tier check can downgrade customer's tier"
+msgstr "Die Stufenprüfung kann die Stufe des Kunden herabstufen"
+
+msgctxt "Languages::client_tiers.minimum_spend_value"
+msgid "Required spendings"
+msgstr "Erforderliche Ausgaben"
+
+msgctxt "Languages::client_tiers.tooltip_minimum_spend_value"
+msgid "Set 0 if you don't want this user group to be assigned automatically. Otherwise, customer can get this user group after spending the specified sum during the reporting period set in the Client Tiers add-on."
+msgstr "Stellen Sie 0 ein, wenn diese Benutzergruppe nicht automatisch zugewiesen werden soll. Andernfalls kann der Kunde diese Benutzergruppe erhalten, nachdem er die angegebene Summe während des Berichtszeitraums ausgegeben hat, der im Client Tiers-Add-On festgelegt wurde."
+
+msgctxt "Languages::client_tiers.bronze_level_customers"
+msgid "Bronze level customers"
+msgstr "Kunden mit Bronze-Level"
+
+msgctxt "Languages::client_tiers.silver_level_customers"
+msgid "Silver level customers"
+msgstr "Kunden der Stufe Silber"
+
+msgctxt "Languages::client_tiers.gold_level_customers"
+msgid "Gold level customers"
+msgstr "Kunden mit Gold-Level"
+
+msgctxt "Languages::client_tiers.client_success_set_tier"
+msgid "[username] spent [total] amount in reported period and moved to [new_group]"
+msgstr "[username] hat im gemeldeten Zeitraum [total] Betrag ausgegeben und ist nach [new_group]verschoben"
+
+msgctxt "Languages::client_tiers.client_fail_set_new_tier"
+msgid "Couldn't assign user group [new_group] to customer with id [user_id]. Customer spent [total] in the reporting period, which is more than the required spendings for this user group."
+msgstr "Die Benutzergruppe [new_group] konnte dem Kunden mit der ID [user_id]nicht zugewiesen werden. Der Kunde hat im Berichtszeitraum [total] ausgegeben, was mehr ist als die erforderlichen Ausgaben für diese Benutzergruppe."
+
+msgctxt "Languages::client_tiers.client_fail_unset_old_tier"
+msgid "Couldn't remove user group [old_group] from customer with id [user_id]. With [total] spent in the reporting period, customer shouldn't be a part of this user group."
+msgstr "Die Benutzergruppe [old_group] konnte nicht vom Kunden mit der ID [user_id]entfernt werden. Mit [total] Ausgaben im Berichtszeitraum sollte der Kunde nicht Teil dieser Benutzergruppe sein."
+
+msgctxt "Languages::client_tiers.client_success_unset_tier"
+msgid "Customer [username] was successfully removed from [old_group] due to [total] spent in reporting period."
+msgstr "Kunde [username] wurde erfolgreich aus [old_group] entfernt, da [total] im Berichtszeitraum ausgegeben wurden."
+
+msgctxt "Languages::log_type_client_tiers"
+msgid "Client Tiers"
+msgstr "Client-Stufen"
+
+msgctxt "Languages::log_action_ct_success"
+msgid "Success"
+msgstr "Erfolgreich"
+
+msgctxt "Languages::log_action_ct_failure"
+msgid "Errors"
+msgstr "Fehler"
+
+msgctxt "Languages::client_tiers.previous_30_days"
+msgid "Previous 30 days"
+msgstr "Letzte 30 Tage"
+
+msgctxt "Languages::client_tiers.previous_month"
+msgid "Previous month"
+msgstr "Vorheriger Monat"
+
+msgctxt "Languages::client_tiers.previous_12_months"
+msgid "Previous 12 months"
+msgstr "Letzte 12 Monate"
+
+msgctxt "Languages::client_tiers.previous_year"
+msgid "Previous year"
+msgstr "Vorheriges Jahr"
+
+msgctxt "Languages::client_tiers.after_completed_purchase"
+msgid "After the order is paid"
+msgstr "Nachdem die Bestellung bezahlt wurde"
+
+msgctxt "Languages::client_tiers.after_tier_check"
+msgid "After tier check only"
+msgstr "Nur nach Tier-Check"
+
+msgctxt "Languages::client_tiers.update_tiers"
+msgid "Tier check"
+msgstr "Tier-Check"
+
+msgctxt "Languages::client_tiers.run_recalculation"
+msgid "Check customer tiers now"
+msgstr "Überprüfen Sie jetzt die Kundenstufen"
+
+msgctxt "Languages::client_tiers.run_tiers_updating_by_cron"
+msgid "Updating client tiers is the resource-intensive process. It's recommended to run it automatically at certain time intervals.<br>To do it, add the following command to <a href=\"https://en.wikipedia.org/wiki/Cron\" target=\"_blank\">Cron</a>:"
+msgstr "Das Aktualisieren von Clientebenen ist ein ressourcenintensiver Prozess. Es wird empfohlen, es in bestimmten Zeitintervallen automatisch auszuführen.<br>Fügen Sie dazu den folgenden Befehl zu <a href=\"https://en.wikipedia.org/wiki/Cron\" target=\"_blank\">Cron</a>hinzu:"
+
+msgctxt "Languages::client_tiers.all_been_recalculated"
+msgid "Tiers have been checked and updated"
+msgstr "Ebenen wurden überprüft und aktualisiert"
+
+msgctxt "Languages::client_tiers.silver_promotion"
+msgid "Silver tier promotion"
+msgstr "Förderung der Silberstufe"
+
+msgctxt "Languages::client_tiers.bronze_promotion"
+msgid "Bronze tier promotion"
+msgstr "Beförderung zur Bronze-Stufe"
+
+msgctxt "Languages::client_tiers.gold_promotion"
+msgid "Gold tier promotion"
+msgstr "Förderung der Goldstufe"
+
+msgctxt "Languages::client_tiers.silver_promotion.detailed_description"
+msgid "Only Silver Level Customers are eligible for this promotion."
+msgstr "Nur Silver-Level-Kunden sind für diese Aktion berechtigt."
+
+msgctxt "Languages::client_tiers.silver_promotion.short_description"
+msgid "This promotion was created automatically as part of the Client Tiers add-on. It applies only to Silver Level Customers."
+msgstr "Diese Werbeaktion wurde automatisch als Teil des Add-ons „Client Tiers“ erstellt. Es gilt nur für Silver-Level-Kunden."
+
+msgctxt "Languages::client_tiers.bronze_promotion.detailed_description"
+msgid "Only Bronze Level Customers are eligible for this promotion."
+msgstr "Nur Kunden mit Bronze-Level sind für diese Aktion berechtigt."
+
+msgctxt "Languages::client_tiers.bronze_promotion.short_description"
+msgid "This promotion was created automatically as part of the Client Tiers add-on. It applies only to Bronze Level Customers."
+msgstr "Diese Werbeaktion wurde automatisch als Teil des Add-ons „Client Tiers“ erstellt. Es gilt nur für Kunden mit Bronze-Level."
+
+msgctxt "Languages::client_tiers.gold_promotion.detailed_description"
+msgid "Only Gold Level Customers are eligible for this promotion."
+msgstr "Nur Gold-Level-Kunden sind für diese Aktion berechtigt."
+
+msgctxt "Languages::client_tiers.gold_promotion.short_description"
+msgid "This promotion was created automatically as part of the Client Tiers add-on. It applies only to Gold Level Customers."
+msgstr "Diese Werbeaktion wurde automatisch als Teil des Add-ons „Client Tiers“ erstellt. Es gilt nur für Gold-Level-Kunden."
+
+msgctxt "Languages::client_tiers.removed_from_old_group"
+msgid "Removed from user group"
+msgstr "Aus Benutzergruppe entfernt"
+
+msgctxt "Languages::client_tiers.moved_to_new_group"
+msgid "Moved to user group"
+msgstr "In Benutzergruppe verschoben"
+
+msgctxt "Languages::client_tiers.installation_message"
+msgid "To help you get started, we have added user groups for Gold, Silver, and Bronze Level Customers, as well as corresponding promotions. Please check <a href=\"[user_groups]\" target=\"_blank\">user groups</a> and <a href=\"[promotions]\" target=\"_blank\">promotions</a>, and adjust them as needed. You can also delete them and create your own."
+msgstr "Um Ihnen den Einstieg zu erleichtern, haben wir Benutzergruppen für Gold-, Silber- und Bronze-Level-Kunden sowie entsprechende Aktionen hinzugefügt. Bitte überprüfen Sie <a href=\"[user_groups]\" target=\"_blank\">Benutzergruppen</a> und <a href=\"[promotions]\" target=\"_blank\">Aktionen</a>und passen Sie sie bei Bedarf an. Sie können sie auch löschen und eigene erstellen."
+

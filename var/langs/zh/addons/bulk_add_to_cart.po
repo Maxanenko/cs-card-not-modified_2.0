@@ -1,0 +1,34 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: cs-cart-latest\n"
+"X-Crowdin-Project-ID: 50163\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /release-4.15.1/addons/bulk_add_to_cart.po\n"
+"X-Crowdin-File-ID: 6562\n"
+"PO-Revision-Date: 2022-07-20 14:35\n"
+
+msgctxt "Addons::name::bulk_add_to_cart"
+msgid "Add products to cart in bulk"
+msgstr "将产品批量添加到购物车"
+
+msgctxt "Addons::description::bulk_add_to_cart"
+msgid "Allows customers to quickly add a large number of products to the cart from the catalog."
+msgstr "允许客户从目录中快速将大量产品添加到购物车。"
+
+msgctxt "Languages::bulk_add_to_cart.install_text"
+msgid "<b>Product list default view</b> has been set to <b>\"Compact list\"</b>. The <b>\"Grid\"</b> and <b>\"List without options\"</b> product list views are no longer available."
+msgstr "<b>产品列表默认视图</b> 已设置为 <b>“精简列表”</b>。 <b>“网格”</b> 和 <b>“无选项列表”</b> 产品列表视图不再可用。"
+
+msgctxt "Languages::bulk_add_to_cart.short_list_warning_install"
+msgid "The <b>Compact list</b> view is not available. Compact list is required for the add-on to work."
+msgstr "<b>紧凑列表</b> 视图不可用。加载项需要压缩列表才能工作。"
+
+msgctxt "Languages::bulk_add_to_cart.add_selected_products_to_cart"
+msgid "Add selected to cart <bdi>(<span [attr]>[number]</span>)</bdi>"
+msgstr "加入购物车 <bdi>(<span [attr]>[number]</span>)</bdi>"
+
