@@ -888,6 +888,34 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
         'department_id', implode(', ', $fields), $condition, $sorting, $limit
     );
 
+    if (isset($_REQUEST['is_search'])) {
+        if (!empty($_REQUEST['name']) && !empty($_REQUEST['status'])) {
+            foreach ($departments as $department_id => $data) {
+                if ((strpos(mb_strtolower($data['department']), mb_strtolower($_REQUEST['name'])) !== false) && ($data['status'] == $_REQUEST['status'])) {
+                    $departments[$department_id] = $data;
+                } else {
+                    unset($departments[$department_id]);
+                }
+            }
+        } elseif (!empty($_REQUEST['name'])) {
+            foreach ($departments as $department_id => $data) {
+                if (strpos(mb_strtolower($data['department']), mb_strtolower($_REQUEST['name'])) !== false) {
+                    $departments[$department_id] = $data;
+                } else {
+                    unset($departments[$department_id]);
+                }
+            }
+        } elseif (!empty($_REQUEST['status'])) {
+            foreach ($departments as $department_id => $data) {
+                if ($data['status'] == $_REQUEST['status']) {
+                    $departments[$department_id] = $data;
+                } else {
+                    unset($departments[$department_id]);
+                }
+            }
+        }
+    }
+
     // $banner_image_ids = array_column($banners, 'banner_image_id');
     // $images = fn_get_image_pairs($banner_image_ids, 'promo', 'M', true, false, $lang_code);
 //

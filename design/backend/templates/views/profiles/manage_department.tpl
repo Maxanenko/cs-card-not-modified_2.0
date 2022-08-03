@@ -180,6 +180,14 @@
 
 {/capture}
 
+{capture name="sidebar"}
+    {hook name="banners:manage_sidebar"}
+        {include file="common/saved_search.tpl" dispatch="banners.manage" view_type="banners"}
+        {include file="views/profiles/components/department_serch_form.tpl" dispatch="profiles.manage_department"}
+    {/hook}
+{/capture}
+
+
 {$page_title = "Отделы"}
 {$select_languages = true}
 
