@@ -87,6 +87,22 @@
                             <p class="muted description">{__("tt_addons_newsletters_views_newsletters_update_users")}</p>
                         </div>
                     </div>
+
+                    <div class="control-group">
+                        <label class="control-label">Персонал</label>
+                        <div class="controls">
+                            {include
+                            file="pickers/users/picker.tpl"
+                            but_text=__("add_recipients_from_users")
+                            data_id="return_users"
+                            but_meta="btn"
+                            input_name="department_data[staff_id]"
+                            item_ids=$department_data.staff_id
+                            placement="right"
+                            user_info=$staff_i}
+                            <p class="muted description">{__("tt_addons_newsletters_views_newsletters_update_users")}</p>
+                        </div>
+                    </div>
                </div>
 
 

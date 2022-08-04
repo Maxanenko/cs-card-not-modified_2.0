@@ -848,7 +848,6 @@ if ($mode === 'get_manager_list') {
     return[CONTROLLER_STATUS_NO_CONTENT];
 } elseif ($mode == 'add_department' || $mode == 'update_department') {
 
-
     $department_id = !empty($_REQUEST['department_id']) ? $_REQUEST['department_id'] : 0;
     $department_data = fn_get_department_data($department_id, DESCR_SL);
 
@@ -857,7 +856,8 @@ if ($mode === 'get_manager_list') {
     }
     Tygh::$app['view']->assign([
         'department_data' => $department_data,
-        'director_i' => !empty(fn_get_user_short_info($department_data['director_id'])) ? fn_get_user_short_info($department_data['director_id']) : []
+        'director_i' => !empty(fn_get_user_short_info($department_data['director_id'])) ? fn_get_user_short_info($department_data['director_id']) : [],
+        'staff_i' => !empty(fn_get_user_short_info($department_data['staff_id'])) ? fn_get_user_short_info($department_data['staff_id']) : []
     ]);
 
 } elseif ($mode == 'manage_department') {
@@ -875,6 +875,10 @@ function fn_get_department_data($department_id = 0, $land_code = CART_LANGUAGE) 
             'department_id' => $department_id
         ], 1, $land_code);
         $department = !empty($departments) ?reset($departments) : [];
+        if(!empty($departments)) {
+            $department = reset($departments);
+            $department['staff_id'] = fn_department_get_staff($department['department_id']);
+        }
     }
 
     return $department;
@@ -1008,13 +1012,56 @@ function fn_departments_update_department($data, $department_id, $lang_code = DE
     }
 
 
+
+    $staff_ids = !empty($data['staff_id']) ? $data['staff_id'] : [];
+    fn_department_add_staff($department_id, $staff_ids);
+
+
     return $department_id;
 }
-
-function fn_delete_department($department_id)
-{
+function fn_delete_department($department_id) {
     if (!empty($department_id)) {
-        $res = db_query('DELETE FROM ?:departments WHERE department_id = ?i', $department_id);
-        db_query('DELETE FROM ?:departments_descriptions WHERE department_id = ?i', $department_id);
+        $res = db_query("DELETE FROM ?:departments WHERE department_id = ?i", $department_id);
+        db_query("DELETE FROM ?:departments_descriptions WHERE department_id = ?i", $department_id);
+        fn_department_delete_staff($department_id);
     }
+}
+
+function fn_department_delete_staff($department_id){
+    db_query("DELETE FROM ?:departments_staff WHERE department_id = ?i", $department_id);
+}
+
+function fn_department_add_staff($department_id, $staff_ids){
+
+    $staff_ids = explode(',', $staff_ids);
+
+
+    $staffs = db_get_array("SELECT * FROM `?:departments_staff` WHERE `department_id` = '$department_id'");
+    foreach ($staffs as $staff => $data){
+
+        for ($i = 0; $i < count($staff_ids); $i++) {
+            if ($data['staff_id'] == $staff_ids[$i]){
+                fn_department_delete_staff($department_id);
+            }
+        }
+    }
+    if(!empty($staff_ids) && $staff_ids[0] != 0) {
+        foreach ($staff_ids as $staff_id) {
+            db_query("REPLACE INTO `?:departments_staff` ?e", [
+                'department_id' => $department_id,
+                'staff_id' => $staff_id
+            ]);
+        }
+    }else{
+        fn_department_delete_staff($department_id);
+    }
+}
+
+function fn_department_get_staff($department_id) {
+    $staff = !empty($department_id) ? db_get_array('SELECT * FROM `?:departments_staff` WHERE `department_id` = ?i', $department_id) : [];
+    $staff_id = [];
+    for ($i = 0; $i < count($staff); $i++) {
+        $staff_id[] = $staff[$i]['staff_id'];
+    }
+    return $staff_id;
 }
