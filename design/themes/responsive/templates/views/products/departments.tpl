@@ -33,7 +33,7 @@
                                         {include
                                         file="common/image.tpl"
                                         no_ids=true
-                                        images=$department.image_pair
+                                        images=$department.main_pair
                                         image_width=$settings.Thumbnails.product_lists_thumbnail_width
                                         image_height=$settings.Thumbnails.product_lists_thumbnail_height
                                         lazy_load=true}
