@@ -850,8 +850,11 @@ if ($mode === 'get_manager_list') {
     if (empty($department_data) && $mode == 'update') {
         return [CONTROLLER_STATUS_NO_PAGE];
     }
+    Tygh::$app['view']->assign([
+        'department_data' => $department_data,
+        'director_i' => !empty(fn_get_user_short_info($department_data['director_id'])) ? fn_get_user_short_info($department_data['director_id']) : []
+    ]);
 
-    Tygh::$app['view']->assign('department_data', $department_data);
 } elseif ($mode == 'manage_department') {
 
     list($departments, $search) = fn_get_departments($_REQUEST, Registry::get('settings.Appearance.admin_elements_per_page'), DESCR_SL);
@@ -892,6 +895,7 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
         'name' => '?:departments_descriptions.department',
         'type' => '?:departments.type',
         'status' => '?:departments.status',
+        'director_id' => '?:departments.director_id'
     );
 
     $condition = $limit = $join = '';
@@ -917,6 +921,7 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
     $fields = array (
         '?:departments.department_id',
         '?:departments.status',
+        'director_id' => '?:departments.director_id',
         '?:departments_descriptions.department',
         '?:departments_descriptions.description',
     );

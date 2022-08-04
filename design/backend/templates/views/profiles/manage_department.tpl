@@ -85,7 +85,7 @@
                                     image=$department.main_pair
                                     image_width=$settings.Thumbnails.product_admin_mini_icon_width
                                     image_height=$settings.Thumbnails.product_admin_mini_icon_height
-                                    href="products.update?product_id=`$product.product_id`"|fn_url
+                                    href="profiles.update_department?department_id=`$department.department_id`"|fn_url
                                     image_css_class="products-list__image--img"
                                     link_css_class="products-list__image--link"
                                     }
@@ -124,13 +124,13 @@
 
                                 <td width="10%" class="right" data-th="{__("status")}">
                                     {include
-                                    file="common/select_popup.tpl"
+                                    file="views/products/components/status_on_manage.tpl"
                                     id=$department.department_id
                                     status=$department.status
-                                    hidden=true
+                                    hidden=false
                                     object_id_name="department_id"
-                                    table="department"
-                                    popup_additional_class="`$no_hide_input` dropleft"}
+                                    table="department_form"
+                                   }
                                 </td>
 
                             </tr>
@@ -171,13 +171,6 @@
                 </li>
             {/capture}
             {dropdown content=$smarty.capture.tools_list}
-
-            {include
-            file="buttons/save.tpl"
-            but_name="dispatch[profiles.update_department]"
-            but_role="action"
-            but_target_form="department_form"
-            but_meta="cm-submit"}}
         {/capture}
 
     </form>

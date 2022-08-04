@@ -70,8 +70,26 @@
                     id="elm_banner_status"
                     obj_id=$id obj=$department_data hidden=false
                     }
-
+                    <div class="control-group">
+                        <label class="control-label">Директор</label>
+                        <div class="controls">
+                            {include
+                            file="pickers/users/picker.tpl"
+                            but_text=__("add_recipients_from_users")
+                            data_id="return_users"
+                            but_meta="btn"
+                            input_name="department_data[director_id]"
+                            item_ids=$department_data.director_id
+                            placement="right"
+                            display="radio"
+                            view_mode="single_button"
+                            user_info=$director_i}
+                            <p class="muted description">{__("tt_addons_newsletters_views_newsletters_update_users")}</p>
+                        </div>
+                    </div>
                </div>
+
+
 
         {capture name="buttons"}
             {if !$id}
