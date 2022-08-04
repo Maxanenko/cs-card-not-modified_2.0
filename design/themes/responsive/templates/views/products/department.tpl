@@ -1,61 +1,23 @@
-{if $departments}
-
-    {script src="js/tygh/exceptions.js"}
-
-
-    {if !$no_pagination}
-        {include file="common/pagination.tpl"}
-    {/if}
-
-    {if !$show_empty}
-        {split data=$departments size=$columns|default:"2" assign="splitted_departments"}
-    {else}
-        {split data=$departments size=$columns|default:"2" assign="splitted_departments" skip_complete=true}
-    {/if}
-
-    {math equation="100 / x" x=$columns|default:"2" assign="cell_width"}
-
-    {* FIXME: Don't move this file *}
-    {script src="js/tygh/product_image_gallery.js"}
-
-    <div class="grid-list">
-        {strip}
-            {foreach from=$splitted_departments item="sdepartments"}
-                {foreach from=$sdepartments item="department"}
-                    <div class="ty-column{$columns}">
-                        {if $department && $department.status == "A"}
-                            {assign var="obj_id" value=$department.department_id}
-                            {assign var="obj_id_prefix" value="`$obj_prefix``$department.department_id`"}
-                            <div class="ty-grid-list__item ty-quick-view-button__wrapper">
-                                <div class="ty-grid-list__image">
-                                    <a href="{"products.department?department_id={$department.department_id}"|fn_url}">
-
-                                        {include
-                                        file="common/image.tpl"
-                                        no_ids=true
-                                        images=$department.image_pair
-                                        image_width=$settings.Thumbnails.product_lists_thumbnail_width
-                                        image_height=$settings.Thumbnails.product_lists_thumbnail_height
-                                        lazy_load=true}
-                                    </a>
-                                </div>
-                                <div class="ty-grid-list__item-name"><bdi>
-                                        <a href="{"products.department?department_id={$department.department_id}"|fn_url}" class="product-title" title="{$department.department}">{$department.department}</a>
-                                        <p>Руководитель: {$department.firstname} {$department.lastname}</p>
-                                    </bdi>
-                                </div>
-                            </div>
-                        {/if}
-                    </div>
-                {/foreach}
-            {/foreach}
-        {/strip}
+<div id="product_features_{$block.block_id}">
+    <div class="ty-feature" width="6%">
+        {if $department_data.main_pair}
+        <div  width="6%"">
+        {include file="common/image.tpl" images=$department_data.main_pair}
     </div>
-
-    {if !$no_pagination}
-        {include file="common/pagination.tpl"}
     {/if}
-
+    <div class="ty-feature__description ty-wysiwyg-content">
+        {$department_data.description nofilter}
+    </div>
+</div>
+{if $products}
+    {assign var="layouts" value=""|fn_get_products_views:false:0}
+    {if $layouts.$selected_layout.template}
+        {include file="`$layouts.$selected_layout.template`" columns=$settings.Appearance.columns_in_products_list}
+    {/if}
+{else}
+    <h2>Персонал:</h2>
+    {foreach from=$staff_ids item=staff_id}
+        <p>Тот самый: {$staff_id.firstname} {$staff_id.lastname}</p>
+    {/foreach}
 {/if}
-
-{capture name="mainbox_title"}{$title}{/capture}
+{capture name="mainbox_title"}{$department_data.variant nofilter}{/capture}
