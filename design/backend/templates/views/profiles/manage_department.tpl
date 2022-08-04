@@ -41,6 +41,7 @@
                                        data-ca-bulkedit-enable="[data-ca-bulkedit-expanded-object=true]"
                                 />
                             </th>
+                            <th></th>
                             <th>
                                 <a class="cm-ajax"
                                    href="{"`$c_url`&sort_by=name&sort_order=`$search.sort_order_rev`"|fn_url}"
@@ -78,6 +79,13 @@
                                     {$no_hide_input=""}
                                 {/if}
 
+                                <td class="left mobile-hide">
+                                    <input type="checkbox"
+                                           name="department_ids[]"
+                                           value="{$department.department_id}"
+                                           class="cm-item {$no_hide_input}
+                                           cm-item-status-{$department.status|lower} " />
+                                </td>
 
                                 <td width="{$image_width + 18}" class="products-list__image">
                                     {include
@@ -166,7 +174,7 @@
             {capture name="tools_list"}
                 <li class="bulkedit-action--legacy">
                     {btn type="delete_selected"
-                    dispatch="dispatch[products.m_delete]"
+                    dispatch="dispatch[profiles.delete_departments]"
                     form="department_form"}
                 </li>
             {/capture}

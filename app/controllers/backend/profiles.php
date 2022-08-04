@@ -261,12 +261,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $_suffix = ".add_department";
         }
-    } elseif ($mode == 'update_departments') {
-        fn_print_die($_REQUEST);
-    }elseif ($mode == 'delete_department') {
-        fn_print_die($_REQUEST);
+    } elseif ($mode == 'delete_department') {
+        $department_id = !empty($_REQUEST['department_id']) ? $_REQUEST['department_id'] : 0;
+        fn_delete_department($department_id);
+        $_suffix = ".manage_department";
     }elseif ($mode == 'delete_departments') {
-        fn_print_die($_REQUEST);
+        if (!empty($_REQUEST['department_ids'])) {
+            foreach ($_REQUEST['department_ids'] as $department_id) {
+                fn_delete_department($department_id);
+            }
+        }
+        $_suffix = ".manage_department";
     }
     return [CONTROLLER_STATUS_OK, 'profiles' . $_suffix];
 }
@@ -1006,3 +1011,10 @@ function fn_departments_update_department($data, $department_id, $lang_code = DE
     return $department_id;
 }
 
+function fn_delete_department($department_id)
+{
+    if (!empty($department_id)) {
+        $res = db_query('DELETE FROM ?:departments WHERE department_id = ?i', $department_id);
+        db_query('DELETE FROM ?:departments_descriptions WHERE department_id = ?i', $department_id);
+    }
+}
