@@ -867,4 +867,3 @@ if ($mode === 'get_manager_list') {
     Tygh::$app['view']->assign('departments', $departments);
     Tygh::$app['view']->assign('search', $search);
 }
-

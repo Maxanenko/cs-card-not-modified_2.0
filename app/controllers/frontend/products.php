@@ -253,6 +253,34 @@ if ($mode == 'search') {
     Tygh::$app['view']->assign('product_id', $_REQUEST['product_id']);
     Tygh::$app['view']->assign('product_notification_enabled', $product_notification_enabled);
     Tygh::$app['view']->assign('product_notification_email', $product_notification_email);
+} elseif ($mode === 'department') {
+    // Save current url to session for 'Continue shopping' button
+    Tygh::$app['session']['continue_url'] = "products.departments";
+
+    $params = $_REQUEST;
+
+
+    if (isset($params['order_ids'])) {
+        $order_ids = is_array($params['order_ids']) ? $params['order_ids'] : explode(',', $params['order_ids']);
+        foreach ($order_ids as $order_id) {
+            if (!fn_is_order_allowed($order_id, $auth)) {
+                return [CONTROLLER_STATUS_NO_PAGE];
+            }
+        }
+    }
+
+    list($departments, $search) = fn_get_departments($params, Registry::get('settings.Appearance.products_per_page'), CART_LANGUAGE);
+
+    foreach ($departments as $department_id => $data) {
+        $departments[$department_id]['firstname'] = fn_get_user_short_info($data['director_id'])['firstname'];
+        $departments[$department_id]['lastname'] = fn_get_user_short_info($data['director_id'])['lastname'];
+    }
+    Tygh::$app['view']->assign('departments', $departments);
+    Tygh::$app['view']->assign('search', $search);
+    Tygh::$app['view']->assign('columns', 3);
+
+
+    fn_add_breadcrumb("Отделы");
 }
 
 function fn_add_product_to_recently_viewed($product_id, $max_list_size = MAX_RECENTLY_VIEWED)
