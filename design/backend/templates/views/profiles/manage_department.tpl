@@ -153,7 +153,7 @@
             tool_href="profiles.add_department"
             prefix="top"
             hide_tools="true"
-            title=__("add_banner")
+            title="Добавить отдел"
             icon="icon-plus"
             }
         {/capture}
