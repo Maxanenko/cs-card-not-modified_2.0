@@ -78,14 +78,18 @@
                                     {$no_hide_input=""}
                                 {/if}
 
-                                <td width="6%" class="left mobile-hide">
-                                    <input type="checkbox"
-                                           name="department_ids[]"
-                                           value="{$department.department_id}"
-                                           class="cm-item {$no_hide_input} cm-item-status-{$department.status|lower}"
-                                    />
-                                </td>
 
+                                <td width="{$image_width + 18}" class="products-list__image">
+                                    {include
+                                    file="common/image.tpl"
+                                    image=$department.main_pair
+                                    image_width=$settings.Thumbnails.product_admin_mini_icon_width
+                                    image_height=$settings.Thumbnails.product_admin_mini_icon_height
+                                    href="products.update?product_id=`$product.product_id`"|fn_url
+                                    image_css_class="products-list__image--img"
+                                    link_css_class="products-list__image--link"
+                                    }
+                                </td>
                                 <td class="{$no_hide_input}" data-th="{__("name")}">
                                     <a class="row-status" href="{"profiles.update_department?department_id=`$department.department_id`"|fn_url}">{$department.department}</a>
                                     {include file="views/companies/components/company_name.tpl" object=$department}
@@ -170,7 +174,7 @@
 
             {include
             file="buttons/save.tpl"
-            but_name="dispatch[products.m_update]"
+            but_name="dispatch[profiles.update_department]"
             but_role="action"
             but_target_form="department_form"
             but_meta="cm-submit"}}
@@ -182,7 +186,7 @@
 
 {capture name="sidebar"}
     {hook name="banners:manage_sidebar"}
-        {include file="common/saved_search.tpl" dispatch="banners.manage" view_type="banners"}
+        {include file="common/saved_search.tpl" dispatch="profiles.manage_department" view_type="department"}
         {include file="views/profiles/components/department_serch_form.tpl" dispatch="profiles.manage_department"}
     {/hook}
 {/capture}

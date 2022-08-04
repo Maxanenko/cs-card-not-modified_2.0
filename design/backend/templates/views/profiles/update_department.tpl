@@ -12,12 +12,12 @@
         
             <div id="content_general">
                     <div class="control-group">
-                        <label for="elm_banner_name" class="control-label cm-required">{__("name")}</label>
+                        <label for="department_name" class="control-label cm-required">{__("name")}</label>
                         <div class="controls">
                             <input 
                                     type="text" 
                                     name="department_data[department]"
-                                    id="elm_banner_name" 
+                                    id="department_name" 
                                     value="{$department_data.department}"
                                     size="25" 
                                     class="input-large" />
@@ -25,7 +25,7 @@
                     </div>
 
 
-                    <div class="control-group" id="banner_graphic">
+                    <div class="control-group" id="department_graphic">
                         <label class="control-label">{__("image")}</label>
                         <div class="controls">
                             {include file="common/attach_images.tpl"
@@ -39,11 +39,11 @@
                         </div>
                     </div>
 
-                    <div class="control-group" id="banner_text">
+                    <div class="control-group" id="department_text">
                         <label class="control-label" for="elm_banner_description">{__("description")}:</label>
                         <div class="controls">
                             <textarea
-                                    id="elm_banner_description"
+                                    id="elm_department_description"
                                     name="department_data[description]"
                                     cols="35"
                                     rows="8"
@@ -52,11 +52,11 @@
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label" for="elm_banner_timestamp_{$id}">{__("creation_date")}</label>
+                        <label class="control-label" for="elm_department_timestamp_{$id}">{__("creation_date")}</label>
                         <div class="controls">
                             {include
                             file="common/calendar.tpl"
-                            date_id="elm_banner_timestamp_`$id`"
+                            date_id="elm_department_timestamp_`$id`"
                             date_name="department_data[timestamp]"
                             date_val=$department_data.timestamp|default:$smarty.const.TIME
                             start_year=$settings.Company.company_start_year
@@ -73,44 +73,47 @@
 
                </div>
 
-            <div id="content_addons" class="hidden clearfix">
-
-                <!--content_addons--></div>
-        
-
-
         {capture name="buttons"}
             {if !$id}
                 {include
                 file="buttons/save_cancel.tpl"
                 but_role="submit-link"
                 but_target_form="department_form"
-                but_name="dispatch[banners.update]"
+                but_name="dispatch[profiles.update_department]"
                 }
             {else}
+                {capture name="tools_list"}
+                    <li>{btn type="list" text=__("delete") class="cm-confirm" href="profiles.delete_department?department_id=`$id`" method="POST"}</li>
+                {/capture}
+                {dropdown content=$smarty.capture.tools_list}
+
                 {include file="buttons/save_cancel.tpl"
-                but_name="dispatch[banners.update]"
+                but_name="dispatch[profiles.update_department]"
                 but_role="submit-link"
-                but_target_form="banners_form"
+                but_target_form="department_form"
                 hide_first_button=$hide_first_button
                 hide_second_button=$hide_second_button
                 save=$id
                 }
             {/if}
+
         {/capture}
 
     </form>
+    {if $id}
 
+
+    {/if}
 {/capture}
 {if !id}
     {$title = "Добавить новый отдел"}
 {else}
     {$title_start = "Изменить"}
-    {$title_end = $collection_data.collection}
+    {$title_end = $department_data.deparment}
 {/if}
 
 {include file="common/mainbox.tpl"
-title=($id) ? $department_data.banner : __("banners.new_banner")
+title=($id) ? $department_data.department : "Новый отдел"
 content=$smarty.capture.mainbox
 buttons=$smarty.capture.buttons
 select_languages=true}
