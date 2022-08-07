@@ -18,7 +18,6 @@ use Tygh\Enum\ObjectStatuses;
 use Tygh\Enum\SiteArea;
 use Tygh\Enum\UserTypes;
 use Tygh\Enum\YesNo;
-use Tygh\Languages\Languages;
 use Tygh\Registry;
 use Tygh\Tools\Url;
 use Tygh\Tygh;
@@ -251,27 +250,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         return [CONTROLLER_STATUS_REDIRECT, $url];
     }
 
-    if ($mode == 'update_department') {
+    if ($mode === 'update_department') {
         $department_id = !empty($_REQUEST['department_id']) ? $_REQUEST['department_id'] : 0;
         $data = !empty($_REQUEST['department_data']) ? $_REQUEST['department_data'] : 0;
         $department_id = fn_departments_update_department($data, $department_id);
 
         if (!empty($department_id)) {
-            $_suffix = ".update_department?department_id={$department_id}";
+            $_suffix = '.update_department?department_id={$department_id}';
         } else {
-            $_suffix = ".add_department";
+            $_suffix = '.add_department';
         }
-    } elseif ($mode == 'delete_department') {
+    } elseif ($mode === 'delete_department') {
         $department_id = !empty($_REQUEST['department_id']) ? $_REQUEST['department_id'] : 0;
         fn_delete_department($department_id);
-        $_suffix = ".manage_department";
-    }elseif ($mode == 'delete_departments') {
+        $_suffix = '.manage_department';
+    }elseif ($mode === 'delete_departments') {
         if (!empty($_REQUEST['department_ids'])) {
             foreach ($_REQUEST['department_ids'] as $department_id) {
                 fn_delete_department($department_id);
             }
         }
-        $_suffix = ".manage_department";
+        $_suffix = '.manage_department';
     }
     return [CONTROLLER_STATUS_OK, 'profiles' . $_suffix];
 }
@@ -846,7 +845,7 @@ if ($mode === 'get_manager_list') {
     Tygh::$app['ajax']->assign('total_objects', isset($params['total_items']) ? $params['total_items'] : count($objects));
 
     return[CONTROLLER_STATUS_NO_CONTENT];
-} elseif ($mode == 'add_department' || $mode == 'update_department') {
+} elseif ($mode === 'add_department' || $mode === 'update_department') {
 
     $department_id = !empty($_REQUEST['department_id']) ? $_REQUEST['department_id'] : 0;
     $department_data = fn_get_department_data($department_id, DESCR_SL);
@@ -860,7 +859,7 @@ if ($mode === 'get_manager_list') {
         'staff_i' => !empty(fn_get_user_short_info($department_data['staff_id'])) ? fn_get_user_short_info($department_data['staff_id']) : []
     ]);
 
-} elseif ($mode == 'manage_department') {
+} elseif ($mode === 'manage_department') {
 
     list($departments, $search) = fn_get_departments($_REQUEST, Registry::get('settings.Appearance.admin_elements_per_page'), DESCR_SL);
 

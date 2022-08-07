@@ -15,9 +15,9 @@
         {include file="`$layouts.$selected_layout.template`" columns=$settings.Appearance.columns_in_products_list}
     {/if}
 {else}
-    <h2>Персонал:</h2>
+    <h2>{__('staff')}:</h2>
     {foreach from=$staff_ids item=staff_id}
-        <p>Тот самый: {$staff_id.firstname} {$staff_id.lastname}</p>
+        <p>{__('the_one')}: {$staff_id.firstname} {$staff_id.lastname}</p>
     {/foreach}
 {/if}
 {capture name="mainbox_title"}{$department_data.variant nofilter}{/capture}

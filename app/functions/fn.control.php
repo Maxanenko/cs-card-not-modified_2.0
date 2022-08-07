@@ -1341,10 +1341,10 @@ function fn_get_department_data($department_id = 0, $land_code = CART_LANGUAGE) 
 function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART_LANGUAGE)
 {
     // Set default values to input params
-    $default_params = array(
+    $default_params = [
         'page' => 1,
         'items_per_page' => $items_per_page
-    );
+    ];
 
     $params = array_merge($default_params, $params);
 
@@ -1352,14 +1352,14 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
         $params['status'] = 'A';
     }
 
-    $sortings = array(
+    $sortings = [
         'position' => '?:departments.position',
         'timestamp' => '?:departments.timestamp',
         'name' => '?:departments_descriptions.department',
         'type' => '?:departments.type',
         'status' => '?:departments.status',
         'director_id' => '?:departments.director_id'
-    );
+    ];
 
     $condition = $limit = $join = '';
 
@@ -1381,13 +1381,13 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
         $condition .= db_quote(' AND ?:departments.status = ?s', $params['status']);
     }
 
-    $fields = array (
+    $fields = [
         '?:departments.department_id',
         '?:departments.status',
         'director_id' => '?:departments.director_id',
         '?:departments_descriptions.department',
         '?:departments_descriptions.description',
-    );
+    ];
 
     $join .= db_quote(' LEFT JOIN ?:departments_descriptions ON ?:departments_descriptions.department_id  = ?:departments.department_id AND ?:departments_descriptions.lang_code = ?s', $lang_code);
 
@@ -1438,7 +1438,7 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
         $departments[$department_id]['main_pair'] = !empty($images[$department_id]) ? reset($images[$department_id]) : array();
     }
 
-    return array($departments, $params);
+    return [$departments, $params];
 }
 
 function fn_departments_update_department($data, $department_id, $lang_code = DESCR_SL)

@@ -71,7 +71,7 @@
                     obj_id=$id obj=$department_data hidden=false
                     }
                     <div class="control-group">
-                        <label class="control-label">Директор</label>
+                        <label class="control-label">{__('director')}</label>
                         <div class="controls">
                             {include
                             file="pickers/users/picker.tpl"
@@ -89,7 +89,7 @@
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">Персонал</label>
+                        <label class="control-label">{__('staff')}</label>
                         <div class="controls">
                             {include
                             file="pickers/users/picker.tpl"
@@ -140,14 +140,14 @@
     {/if}
 {/capture}
 {if !id}
-    {$title = "Добавить новый отдел"}
+    {$title = __('Add a new department')}
 {else}
-    {$title_start = "Изменить"}
+    {$title_start = __('but_change')}
     {$title_end = $department_data.deparment}
 {/if}
 
 {include file="common/mainbox.tpl"
-title=($id) ? $department_data.department : "Новый отдел"
+title=($id) ? $department_data.department : __('c')
 content=$smarty.capture.mainbox
 buttons=$smarty.capture.buttons
 select_languages=true}

@@ -280,7 +280,7 @@ if ($mode == 'search') {
     Tygh::$app['view']->assign('columns', 3);
 
 
-    fn_add_breadcrumb("Отделы");
+    fn_add_breadcrumb(__('departments'));
 } elseif ($mode == 'department') {
     $department_data = [];
     $department_id = !empty($_REQUEST['department_id']) ? $_REQUEST['department_id'] : 0;
@@ -292,7 +292,7 @@ if ($mode == 'search') {
 
     Tygh::$app['view']->assign('department_data', $department_data);
 
-    fn_add_breadcrumb("Отделы", [$department_data['department']]);
+    fn_add_breadcrumb(__('departments'), [$department_data['department']]);
 
     $params = $_REQUEST;
     $staff_ids = [];

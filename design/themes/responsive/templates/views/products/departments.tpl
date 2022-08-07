@@ -40,8 +40,11 @@
                                     </a>
                                 </div>
                                 <div class="ty-grid-list__item-name"><bdi>
-                                        <a href="{"products.department?department_id={$department.department_id}"|fn_url}" class="product-title" title="{$department.department}">{$department.department}</a>
-                                        <p>Руководитель: {$department.firstname} {$department.lastname}</p>
+                                        <a href="{"products.department?department_id={$department.department_id}"|fn_url}"
+                                           class="product-title"
+                                           title="{$department.department}"
+                                        >{$department.department}</a>
+                                        <p>{__('director')}: {$department.firstname} {$department.lastname}</p>
                                     </bdi>
                                 </div>
                             </div>

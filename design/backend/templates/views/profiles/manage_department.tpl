@@ -165,7 +165,7 @@
             tool_href="profiles.add_department"
             prefix="top"
             hide_tools="true"
-            title="Добавить отдел"
+            title= __('Add_a_new_department')
             icon="icon-plus"
             }
         {/capture}
@@ -193,7 +193,7 @@
 {/capture}
 
 
-{$page_title = "Отделы"}
+{$page_title = __('departments')}
 {$select_languages = true}
 
 {include
