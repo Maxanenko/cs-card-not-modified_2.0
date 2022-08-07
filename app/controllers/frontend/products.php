@@ -253,7 +253,82 @@ if ($mode == 'search') {
     Tygh::$app['view']->assign('product_id', $_REQUEST['product_id']);
     Tygh::$app['view']->assign('product_notification_enabled', $product_notification_enabled);
     Tygh::$app['view']->assign('product_notification_email', $product_notification_email);
+} elseif ($mode === 'departments') {
+    // Save current url to session for 'Continue shopping' button
+    Tygh::$app['session']['continue_url'] = "products.departments";
+
+    $params = $_REQUEST;
+
+
+    if (isset($params['order_ids'])) {
+        $order_ids = is_array($params['order_ids']) ? $params['order_ids'] : explode(',', $params['order_ids']);
+        foreach ($order_ids as $order_id) {
+            if (!fn_is_order_allowed($order_id, $auth)) {
+                return [CONTROLLER_STATUS_NO_PAGE];
+            }
+        }
+    }
+
+    list($departments, $search) = fn_get_departments($params, Registry::get('settings.Appearance.products_per_page'), CART_LANGUAGE);
+
+    foreach ($departments as $department_id => $data) {
+        $departments[$department_id]['firstname'] = fn_get_user_short_info($data['director_id'])['firstname'];
+        $departments[$department_id]['lastname'] = fn_get_user_short_info($data['director_id'])['lastname'];
+    }
+    Tygh::$app['view']->assign('departments', $departments);
+    Tygh::$app['view']->assign('search', $search);
+    Tygh::$app['view']->assign('columns', 3);
+
+
+    fn_add_breadcrumb(__('departments'));
+} elseif ($mode == 'department') {
+    $department_data = [];
+    $department_id = !empty($_REQUEST['department_id']) ? $_REQUEST['department_id'] : 0;
+    $department_data = fn_get_department_data($department_id,  CART_LANGUAGE);
+
+    if (empty($department_data)) {
+        return [CONTROLLER_STATUS_NO_PAGE];
+    }
+
+    Tygh::$app['view']->assign('department_data', $department_data);
+
+    fn_add_breadcrumb(__('departments'), [$department_data['department']]);
+
+    $params = $_REQUEST;
+    $staff_ids = [];
+    foreach ($department_data['staff_id'] as $data) {
+        $staff_ids[] = fn_get_user_short_info($data);
+    }
+
+
+    if ($items_per_page = fn_change_session_param(Tygh::$app['session']['search_params'], $_REQUEST, 'items_per_page')) {
+        $params['items_per_page'] = $items_per_page;
+    }
+    if ($sort_by = fn_change_session_param(Tygh::$app['session']['search_params'], $_REQUEST, 'sort_by')) {
+        $params['sort_by'] = $sort_by;
+    }
+    if ($sort_order = fn_change_session_param(Tygh::$app['session']['search_params'], $_REQUEST, 'sort_order')) {
+        $params['sort_order'] = $sort_order;
+    }
+
+
+
+    fn_gather_additional_products_data($products, [
+        'get_icon'      => true,
+        'get_detailed'  => true,
+        'get_options'   => true,
+        'get_discounts' => true,
+        'get_features'  => false
+    ]);
+
+    $selected_layout = fn_get_products_layout($_REQUEST);
+
+    Tygh::$app['view']->assign('department_data', $department_data);
+    Tygh::$app['view']->assign('staff_ids', $staff_ids);
+    Tygh::$app['view']->assign('search', $search);
 }
+
+
 
 function fn_add_product_to_recently_viewed($product_id, $max_list_size = MAX_RECENTLY_VIEWED)
 {
